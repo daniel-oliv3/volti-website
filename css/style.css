@@ -189,11 +189,12 @@ body {
 }
 
 /* ======= REUSED STYLE ======= */
-
+.container {
+    padding-inline: 16px;
+}
 
 
 /* ======= ======= Header Section/Seção de Cabeçalho ======= ======= */
-.navbar,
 .header-action {
     display: none;
 }
