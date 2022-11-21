@@ -16,7 +16,7 @@
     /* Typography */
     --ff-quicksand: "Quicksand", sans-serif;
     --ff-nunito_sans: "Nunito Sans", sans-serif;
-  
+
     --fs-1: 5.5rem;
     --fs-2: 3.6rem;
     --fs-3: 3.2rem;
@@ -28,7 +28,7 @@
     --fs-9: 1.5rem;
     --fs-10: 1.4rem;
     --fs-11: 1.3rem;
-  
+
     --fw-500: 500;
     --fw-600: 600;
     --fw-700: 700;
@@ -51,7 +51,7 @@
     /* Transition */
     --transition-1: 0.25s ease;
     --transition-2: 0.5s ease;
-    --cubic-out: cubic-bezier(0.33, 0.85, 0.4, 0.96);   
+    --cubic-out: cubic-bezier(0.33, 0.85, 0.4, 0.96);
 }
 
 
@@ -120,7 +120,7 @@ body {
     font-size: 1.6rem;
     line-height: 1.7;
     overflow-x: hidden;
-    min-height: 300vh;
+    /*min-height: 300vh;*/
 }
 
 :focus-visible {
@@ -207,43 +207,44 @@ body {
     background-color: var(--yellow-green);
     padding-block: 25px;
     z-index: 4;
-  }
-  
-  .header.active {
+}
+
+.header.active {
     position: fixed;
     animation: slideIn 0.5s ease forwards;
-  }
-  
-  @keyframes slideIn {
-    0% { 
-        transform: translateY(-100%); 
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-100%);
     }
-    100% { 
-        transform: translateY(0); 
+
+    100% {
+        transform: translateY(0);
     }
-  }
-  
-  .header .container {
+}
+
+.header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-  
-  .nav-toggle-btn { 
-    font-size: 3rem; 
 }
-  
-  .nav-toggle-btn.active .open,
-  .nav-toggle-btn .close { 
-    display: none; 
+
+.nav-toggle-btn {
+    font-size: 3rem;
 }
-  
-  .nav-toggle-btn.open,
-  .nav-toggle-btn.active  .close { 
-    display: block; 
+
+.nav-toggle-btn.active .open,
+.nav-toggle-btn .close {
+    display: none;
 }
-  
-  .navbar {
+
+.nav-toggle-btn.open,
+.nav-toggle-btn.active .close {
+    display: block;
+}
+
+.navbar {
     position: absolute;
     top: 100%;
     left: 0;
@@ -253,85 +254,105 @@ body {
     overflow: hidden;
     visibility: hidden;
     transition: 0.25s var(--cubic-out);
-  }
-  
-  .navbar.active {
+}
+
+.navbar.active {
     visibility: visible;
     height: 224px;
     transition-duration: 0.5s;
-  }
-  
-  .navbar-item { 
-    border-block-end: 1px solid var(--oxford-blue_a15); 
 }
-  
-  .navbar-link {
+
+.navbar-item {
+    border-block-end: 1px solid var(--oxford-blue_a15);
+}
+
+.navbar-link {
     color: var(--black);
     font-family: var(--ff-quicksand);
     font-size: var(--fs-10);
     font-weight: var(--fw-700);
     text-transform: uppercase;
     padding: 10px 15px;
-  }
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ======= Responsive/Responsividade ======= */
-@media (max-width: 991px){
-
-    html {
-        font-size: 55%;
-    }
-
 }
 
-@media (max-width: 768px){
-
-
+/* ======= Hero Section ======= */
+.hero-list {
+    display: none;
 }
 
-@media (max-width: 450px){
-
-    html {
-        font-size: 50%;
-    }
-
+.hero {
+    position: relative;
+    background-color: var(--yellow-green);
+    padding-block: calc(var(--section-padding) + 60px) 0;
+    margin-block-end: var(--section-padding);
 }
+
+.hero .container {
+    display: grid;
+    gap: 50px;
+}
+
+.hero-title {
+    color: var(--white);
+    text-align: center;
+    line-height: 1.4;
+    margin-block-end: 30px;
+}
+
+.hero-title .span {
+    display: inline;
+    color: var(--smoky-black);
+}
+
+.hero .btn {
+    margin-inline: auto;
+}
+
+.hero .btn:is(:hover, :focus-visible) {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.hero-banner {
+    margin-block-end: -15%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
